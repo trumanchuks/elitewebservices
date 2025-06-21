@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How To on Airspace | Creative Agency Hugo Template</title>
+    <link>http://localhost:1313/airspace/examplesite/de/tags/how-to/</link>
+    <description>Recent content in How To on Airspace | Creative Agency Hugo Template</description>
+    <generator>Hugo</generator>
+    <language>de-at</language>
+    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/airspace/examplesite/de/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty-print dates</title>
+      <link>http://localhost:1313/airspace/examplesite/de/blog/date-i18n/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/airspace/examplesite/de/blog/date-i18n/</guid>
+      <description>&lt;p&gt;Um einen &lt;a href=&#34;https://en.wikipedia.org/wiki/ISO_8601&#34;&gt;ISO-8601&lt;/a&gt;-Zeitstempel in der aktuellen Sprache auszuschreiben, kann der Shortcode &lt;code&gt;date_l10n&lt;/code&gt; verwendet werden:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

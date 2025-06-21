@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/french/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/french/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>/french/faq/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/french/faq/</guid>
+      <description>&lt;h3 id=&#34;welcome-to-airspace&#34;&gt;Welcome to Airspace!&lt;/h3&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ullam sint quas pariatur ipsam nemo&#xA;repellendus suscipit quod accusantium numquam tempora assumenda sequi, velit voluptatem soluta voluptatibus&#xA;nesciunt ducimus iure. Excepturi voluptatum ullam tenetur perspiciatis alias delectus beatae voluptatibus&#xA;magni facere aspernatur, qui, quas nesciunt blanditiis assumenda a expedita accusantium quos consectetur neque&#xA;nemo. Necessitatibus est quod quo deserunt, dicta aut voluptatem blanditiis, alias quos sed vel unde enim&#xA;dolore aliquam quis reiciendis qui vitae reprehenderit. Similique nemo accusamus, vel possimus error cumque&#xA;quas, tempora repellendus velit, unde cupiditate impedit deserunt fugit labore et nostrum sapiente est&#xA;obcaecati maiores voluptates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>/french/message_sent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/message_sent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About Our Company</title>
+      <link>/french/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drop Us A Note</title>
+      <link>/french/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/contact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>John Doe</title>
+      <link>/french/author/john-doe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/author/john-doe/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet.&#xA;Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mark Dinn</title>
+      <link>/french/author/mark-dinn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/author/mark-dinn/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet.&#xA;Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our Pricing</title>
+      <link>/french/pricing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/pricing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Service</title>
+      <link>/french/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/french/service/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
