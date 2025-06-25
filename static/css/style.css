@@ -36,53 +36,45 @@ header p {
 
 header a.button {
   display: inline-block;
-  margin: 20px 10px 0;
+  margin: 15px 10px;
   padding: 12px 24px;
-  background-color: #28a745;
+  background-color: #004085;
   color: white;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-header a.button.secondary {
-  background-color: #17a2b8;
-}
-
 header a.button:hover {
-  background-color: #218838;
+  background-color: #002752;
 }
 
-header a.button.secondary:hover {
-  background-color: #138496;
-}
-
-/* Section Style */
+/* Section Styling */
 section {
-  padding: 40px 20px;
+  padding: 40px;
   text-align: center;
 }
 
 .card {
-  background-color: #f7f9fc;
+  background-color: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 10px;
-  flex: 1;
-  min-width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  max-width: 300px;
 }
 
-/* Flex Layout for Cards */
-section.cards {
+/* Card Container */
+section:nth-of-type(2) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 20px;
 }
 
-/* Thank You Page */
+/* Thank You Page Layout */
 .thank-you-wrapper {
   display: flex;
   flex-direction: column;
@@ -118,7 +110,6 @@ section.cards {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
 .thank-you-buttons .button:hover {
