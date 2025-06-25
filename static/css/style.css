@@ -34,46 +34,126 @@ header p {
   font-size: 1.2rem;
 }
 
-/* Buttons */
-.button {
+header a.button {
   display: inline-block;
+  margin: 20px 10px 0;
   padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+header a.button.secondary {
+  background-color: #17a2b8;
+}
+
+header a.button:hover {
+  background-color: #218838;
+}
+
+header a.button.secondary:hover {
+  background-color: #138496;
+}
+
+/* Section Style */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: 10px;
-  background: #0078d4;
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Flex Layout for Cards */
+section.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Thank You Page */
+.thank-you-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.thank-you-wrapper p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.thank-you-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thank-you-buttons .button {
+  padding: 12px 24px;
+  background-color: #004085;
   color: white;
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.3s ease;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background: #005ba1;
+.thank-you-buttons .button:hover {
+  background-color: #002752;
 }
 
-.button.secondary {
-  background-color: #444;
+.thank-you-buttons .button.secondary {
+  background-color: #6c757d;
 }
 
-.button.secondary:hover {
-  background-color: #222;
+.thank-you-buttons .button.secondary:hover {
+  background-color: #5a6268;
 }
 
-/* Cards */
-.card {
-  width: 300px;
-  margin: 10px;
+/* Footer */
+footer {
+  background-color: #001147;
+  color: white;
+  text-align: center;
   padding: 20px;
-  background: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 60px;
 }
 
-/* Contact/Thank-you Layout */
-.form-wrapper, .thank-you-wrapper {
-  max-width: 600px;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .thank-you-wrapper p {
+    font-size: 1rem;
+  }
+
+  .card {
+    margin: 10px 0;
+  }
 }
