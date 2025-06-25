@@ -1,0 +1,79 @@
+/* Reset & Typography */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Header Style */
+header {
+  background-color: #001147;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  background: #0078d4;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #005ba1;
+}
+
+.button.secondary {
+  background-color: #444;
+}
+
+.button.secondary:hover {
+  background-color: #222;
+}
+
+/* Cards */
+.card {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Contact/Thank-you Layout */
+.form-wrapper, .thank-you-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
