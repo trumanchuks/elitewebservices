@@ -1,35 +1,28 @@
-/* Global Reset */
+/* Base Reset */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8f9fb;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
   color: #333;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
+  line-height: 1.6;
 }
 
 /* Hero Section */
 .hero {
-  background: url('/images/hero-bg.jpg') no-repeat center center/cover;
-  text-align: center;
-  padding: 100px 20px;
+  background-color: #111827;
   color: white;
+  padding: 80px 20px;
+  text-align: center;
 }
-
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
-
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
-
 .hero .btn {
   padding: 12px 28px;
   background: #ff9900;
@@ -39,115 +32,57 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s ease;
+  text-decoration: none;
 }
 
-.hero .btn:hover {
-  background: #e68200;
-}
-
-/* AWS Badge Section */
+/* AWS Badges */
 .badges {
-  background: #fff;
+  padding: 40px 20px;
   text-align: center;
-  padding: 30px 20px;
 }
-
 .badges img {
-  max-width: 150px;
-  margin: 0 15px;
+  max-width: 120px;
+  margin: 10px;
 }
 
-/* Solutions Section */
-.solutions {
-  background: #f0f2f5;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.solutions h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
+/* Solutions Grid */
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  margin-top: 20px;
+  margin: 40px 20px;
 }
-
 .solution-card {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
 }
-
 .solution-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-.solution-card h3 {
-  margin: 15px 0 10px;
-  color: #2d2d2d;
+/* AOS Animations */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.solution-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* CTA Section */
-.cta {
-  background: #232f3e;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta .btn {
-  background: #ff9900;
-  padding: 12px 28px;
-  border-radius: 4px;
-  color: white;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.cta .btn:hover {
-  background: #cc7a00;
-}
-
-/* Footer */
-.footer {
-  background: #1d1d1d;
-  color: #bbb;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Logos Partial */
+/* Client Logos */
 .client-logos {
-  background: #fff;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  text-align: center;
 }
-
 .client-logos h3 {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
-
 .logos-grid {
   display: flex;
   justify-content: center;
@@ -155,24 +90,21 @@ body {
   gap: 40px;
   flex-wrap: wrap;
 }
-
 .logos-grid img {
   max-width: 120px;
   height: auto;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
-
 .logos-grid img:hover {
   filter: grayscale(0%);
 }
 
-/* AOS Utility */
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
-}
-
-[data-aos].aos-animate {
-  opacity: 1;
+/* Footer */
+footer {
+  background: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
 }
