@@ -1,0 +1,45 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Web Services</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Elite Web Services</h1>
+    <p>Empowering Businesses with AWS Cloud Solutions</p>
+    <a href="#services" class="cta-btn">Explore Services</a>
+  </header>
+
+  <section id="services">
+    <h2 data-aos="fade-up">What We Do</h2>
+    <div class="services">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Cloud Architecture</h3>
+        <p>Design secure, scalable, and cost-efficient AWS environments.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>DevOps Automation</h3>
+        <p>Infrastructure as Code, CI/CD, and monitoring pipelines.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Migrations</h3>
+        <p>Move legacy systems to cloud with minimal downtime.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Elite Web Services. All rights reserved.</p>
+  </footer>
+
+  <script>AOS.init();</script>
+</body>
+</html>
+{{ end }}
