@@ -4,92 +4,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite Web Services</title>
+  <title>{{ .Title }}</title>
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ConsultingFirm",
+    "name": "Elite Web Services",
+    "url": "https://elitewebservices.net",
+    "description": "A Select Tier AWS Partner delivering secure, scalable, cost-optimized cloud architectures.",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "AWS Partner Network"
+    }
+  }
+  </script>
 </head>
 <body>
-  <script>AOS.init();</script>
 
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <a href="/">Home</a>
-    <a href="#services">Services</a>
-    <a href="#success">Success Stories</a>
-    <a href="/contact">Contact</a>
-  </nav>
+<!-- Hero Section -->
+<section class="aws-hero" data-aos="fade-up">
+  {{ with .Site.Params.awsPartnerBadge }}
+    <img src="{{ . }}" alt="AWS Partner Badge" class="aws-badge" />
+  {{ end }}
+  <h1>{{ .Title | default "Accelerate Your Cloud Journey with AWS Expertise" }}</h1>
+  <p>{{ .Params.heroSubtitle | default "A Select Tier AWS Partner specializing in Migration, Security, and Cost Optimization" }}</p>
+  <div class="cta-group">
+    <a href="/aws-assessment" class="btn-aws">Get a Free AWS Assessment</a>
+    <a href="/case-studies" class="btn-secondary">View Case Studies</a>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Elite Web Services</h1>
-    <p>Empowering Businesses with AWS Cloud Solutions</p>
-    <a href="#services" class="cta-btn">Explore Our Services</a>
-  </header>
+<!-- AWS Competencies -->
+<section class="aws-proof" data-aos="fade-up">
+  <h2>Validated AWS Expertise</h2>
+  <div class="competencies">
+    {{ range .Site.Data.aws.competencies }}
+      <div class="competency-badge">
+        <img src="{{ .badge }}" alt="{{ .name }} Badge" />
+        <span>{{ .name }}</span>
+      </div>
+    {{ end }}
+  </div>
+  <h3>Trusted by AWS Customers</h3>
+  {{ partial "client-logos.html" . }}
+</section>
 
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <h2 data-aos="fade-up">What We Do</h2>
-    <div class="services-grid">
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h3>Cloud Foundation</h3>
-        <p>Establish secure, scalable environments tailored to your growth.</p>
+<!-- Solutions -->
+<section class="solutions" data-aos="fade-up">
+  <h2>AWS Solutions for Enterprise</h2>
+  <div class="solution-cards">
+    {{ range where .Site.Pages "Type" "solutions" }}
+      <div class="card">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}">Learn More →</a>
       </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Cloud Secure</h3>
-        <p>24/7 threat detection and rapid incident response.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
-        <h3>Cloud Operate</h3>
-        <p>Continuous monitoring, alerts, and proactive AWS support.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="400">
-        <h3>Cloud Gateway</h3>
-        <p>Analytics, cost forecasting, and compliance reporting platform.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="500">
-        <h3>AI Gateway</h3>
-        <p>Accelerate AI/ML solutions with SageMaker and Bedrock.</p>
-      </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- Case Studies -->
+<section class="case-studies" data-aos="fade-up">
+  <h2>AWS Success Stories</h2>
+  {{ range first 3 (where .Site.Pages "Type" "case-studies") }}
+    <div class="case-study">
+      <h3>{{ .Title }}</h3>
+      <p><strong>Result:</strong> {{ .Params.roi }}</p>
+      <a href="{{ .Permalink }}">Read Full Story</a>
     </div>
-  </section>
+  {{ end }}
+</section>
 
-  <!-- Success Stories Section -->
-  <section id="success" class="section">
-    <h2 data-aos="fade-up">Customer Success Stories</h2>
-    <div class="stories-grid">
-      <div class="story-card" data-aos="fade-up">
-        <img src="/images/playbill.jpg" alt="Playbill Success" />
-        <h3>Playbill</h3>
-        <p>Zero downtime during Tony Awards with 24/7 support.</p>
-      </div>
-      <div class="story-card" data-aos="fade-up" data-aos-delay="100">
-        <img src="/images/celtics.jpg" alt="Boston Celtics" />
-        <h3>Boston Celtics</h3>
-        <p>Modernized analytics, enhanced fan engagement.</p>
-      </div>
-      <div class="story-card" data-aos="fade-up" data-aos-delay="200">
-        <img src="/images/comply.jpg" alt="COMPLY" />
-        <h3>COMPLY</h3>
-        <p>Saved $460K/year on AWS with optimization review.</p>
-      </div>
-    </div>
-  </section>
+<!-- CTA Footer -->
+<section class="cta zoom-in">
+  <h2>Ready to Transform Your Cloud Infrastructure?</h2>
+  <a href="/contact" class="cta-btn">Schedule a Free Consultation</a>
+</section>
 
-  <!-- CTA Section -->
-  <section class="cta zoom-in">
-    <h2>Ready to Transform Your Business?</h2>
-    <a href="/contact" class="cta-btn">Schedule Your Free Consultation</a>
-  </section>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; {{ now.Format "2006" }} Elite Web Services. All rights reserved.</p>
+  <p>
+    <a href="/privacy">Privacy Policy</a> |
+    <a href="/terms">Terms of Service</a>
+  </p>
+</footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; {{ now.Format "2006" }} Elite Web Services. All rights reserved.</p>
-    <p>
-      <a href="/privacy">Privacy Policy</a> | 
-      <a href="/terms">Terms of Service</a>
-    </p>
-  </footer>
 </body>
 </html>
 {{ end }}
