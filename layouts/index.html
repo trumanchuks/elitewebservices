@@ -6,40 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elite Web Services</title>
   <link rel="stylesheet" href="/css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-
+  <!-- Header / Hero -->
   <header class="hero">
     <h1>Elite Web Services</h1>
     <p>Empowering Businesses with AWS Cloud Solutions</p>
-    <a href="#services" class="cta-btn">Explore Services</a>
+    <a href="/services" class="cta-btn">Explore Services</a>
   </header>
 
-  <section id="services">
-    <h2 data-aos="fade-up">What We Do</h2>
-    <div class="services">
+  <!-- Services Section -->
+  <section id="services" class="section" data-aos="fade-up">
+    <h2>What We Do</h2>
+    <div class="services-grid">
       <div class="card" data-aos="fade-up" data-aos-delay="100">
         <h3>Cloud Architecture</h3>
-        <p>Design secure, scalable, and cost-efficient AWS environments.</p>
+        <p>Design secure, scalable, and cost-efficient AWS environments tailored to your business.</p>
       </div>
       <div class="card" data-aos="fade-up" data-aos-delay="200">
         <h3>DevOps Automation</h3>
-        <p>Infrastructure as Code, CI/CD, and monitoring pipelines.</p>
+        <p>Infrastructure as Code, CI/CD, observability, and automated deployments.</p>
       </div>
       <div class="card" data-aos="fade-up" data-aos-delay="300">
         <h3>Migrations</h3>
-        <p>Move legacy systems to cloud with minimal downtime.</p>
+        <p>Move your applications to the cloud with minimal downtime and zero data loss.</p>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Elite Web Services. All rights reserved.</p>
+  <!-- Call to Action -->
+  <section class="cta" data-aos="zoom-in">
+    <h2>Ready to Transform Your Business?</h2>
+    <a href="/contact" class="cta-btn">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Elite Web Services. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/contact">Contact</a> |
+        <a href="https://linkedin.com/company/elitewebservices" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/trumanchuks/elitewebservices" target="_blank">GitHub</a>
+      </div>
+    </div>
   </footer>
 
-  <script>AOS.init();</script>
+  <!-- AOS Init -->
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
 </body>
 </html>
 {{ end }}
