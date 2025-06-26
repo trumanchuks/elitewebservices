@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ .Title }}</title>
+
+  <!-- CSS & AOS -->
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -12,7 +14,7 @@
     AOS.init();
   </script>
 
-  <!-- SEO Structured Data -->
+  <!-- SEO JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,39 +29,51 @@
   }
   </script>
 </head>
+
 <body>
 
+<!-- Sticky Nav -->
+<nav class="main-nav">
+  <a href="#hero">Home</a>
+  <a href="#proof">AWS Expertise</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#case-studies">Case Studies</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <!-- Hero Section -->
-<section class="aws-hero" data-aos="fade-up">
+<section id="hero" class="aws-hero" data-aos="fade-up">
   {{ with .Site.Params.awsPartnerBadge }}
     <img src="{{ . }}" alt="AWS Partner Badge" class="aws-badge" />
   {{ end }}
   <h1>{{ .Title | default "Accelerate Your Cloud Journey with AWS Expertise" }}</h1>
-  <p>{{ .Params.heroSubtitle | default "A Select Tier AWS Partner specializing in Migration, Security, and Cost Optimization" }}</p>
+  <p>{{ .Params.heroSubtitle | default "AWS Select Tier Partner specializing in migration, DevOps, and security." }}</p>
   <div class="cta-group">
     <a href="/aws-assessment" class="btn-aws">Get a Free AWS Assessment</a>
     <a href="/case-studies" class="btn-secondary">View Case Studies</a>
   </div>
 </section>
 
-<!-- AWS Competencies -->
-<section class="aws-proof" data-aos="fade-up">
+<!-- AWS Competencies & Client Logos -->
+<section id="proof" class="aws-proof" data-aos="fade-up">
   <h2>Validated AWS Expertise</h2>
   <div class="competencies">
     {{ range .Site.Data.aws.competencies }}
       <div class="competency-badge">
-        <img src="{{ .badge }}" alt="{{ .name }} Badge" />
+        <img src="{{ .badge }}" alt="{{ .name }} Competency" />
         <span>{{ .name }}</span>
       </div>
     {{ end }}
   </div>
-  <h3>Trusted by AWS Customers</h3>
-  {{ partial "client-logos.html" . }}
+  <div class="logos">
+    <h3>Trusted by Global Clients</h3>
+    {{ partial "client-logos.html" . }}
+  </div>
 </section>
 
-<!-- Solutions -->
-<section class="solutions" data-aos="fade-up">
-  <h2>AWS Solutions for Enterprise</h2>
+<!-- Enterprise Solutions Grid -->
+<section id="solutions" class="solutions" data-aos="fade-up">
+  <h2>Cloud Solutions</h2>
   <div class="solution-cards">
     {{ range where .Site.Pages "Type" "solutions" }}
       <div class="card">
@@ -71,22 +85,22 @@
   </div>
 </section>
 
-<!-- Case Studies -->
-<section class="case-studies" data-aos="fade-up">
+<!-- Case Studies w/ ROI -->
+<section id="case-studies" class="case-studies" data-aos="fade-up">
   <h2>AWS Success Stories</h2>
   {{ range first 3 (where .Site.Pages "Type" "case-studies") }}
     <div class="case-study">
       <h3>{{ .Title }}</h3>
       <p><strong>Result:</strong> {{ .Params.roi }}</p>
-      <a href="{{ .Permalink }}">Read Full Story</a>
+      <a href="{{ .Permalink }}">Read the Full Story</a>
     </div>
   {{ end }}
 </section>
 
-<!-- CTA Footer -->
-<section class="cta zoom-in">
-  <h2>Ready to Transform Your Cloud Infrastructure?</h2>
-  <a href="/contact" class="cta-btn">Schedule a Free Consultation</a>
+<!-- CTA Section -->
+<section id="contact" class="cta zoom-in">
+  <h2>Ready to Transform Your Business?</h2>
+  <a href="/contact" class="cta-btn">Schedule Your Free Consultation</a>
 </section>
 
 <!-- Footer -->
