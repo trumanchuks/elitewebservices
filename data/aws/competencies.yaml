@@ -1,0 +1,6 @@
+- name: Migration
+  badge: /img/aws/migration.png
+- name: DevOps
+  badge: /img/aws/devops.png
+- name: Security
+  badge: /img/aws/security.png
