@@ -1,0 +1,11 @@
+title: "AWS Competencies"
+competencies:
+  - name: "Migration"
+    description: "Validated expertise to help businesses migrate applications and legacy infrastructure to AWS."
+    badge: "/img/aws/aws-partner-badge.png"
+  - name: "Data & Analytics"
+    description: "Demonstrated success in helping customers evaluate and use AWS tools and best practices for data analytics."
+    badge: "/img/aws/aws-partner-badge.png"
+  - name: "DevOps"
+    description: "Recognized for delivering automated solutions, CI/CD pipelines, and DevOps consulting on AWS."
+    badge: "/img/aws/aws-partner-badge.png"
