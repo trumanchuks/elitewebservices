@@ -44,5 +44,5 @@ jobs:
               --distribution-id $DISTRIBUTION_ID \
               --paths "/*"
           else
-            echo "⚠️  No matching CloudFront distribution found for comment 'EWS CloudFront'"
+            echo "⚠️ No matching CloudFront distribution found with comment 'EWS CloudFront'"
           fi
