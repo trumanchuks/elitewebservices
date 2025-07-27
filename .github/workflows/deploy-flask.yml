@@ -1,0 +1,35 @@
+name: Deploy Flask App to Lightsail
+
+on:
+  push:
+    branches:
+      - flask-deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+
+    - name: Deploy Flask App to Lightsail
+      run: |
+        ssh -o StrictHostKeyChecking=no ec2-user@<LIGHTSAIL_IP> << 'EOF'
+        set -e
+        echo "===> Pulling latest code..."
+        cd /var/www/elitewebservices/flask_app || exit 1
+        source venv/bin/activate
+        git fetch --all
+        git reset --hard origin/flask-deploy
+        echo "===> Installing dependencies..."
+        pip install -r requirements.txt
+        echo "===> Restarting Flask service..."
+        sudo systemctl restart flaskapp
+        echo "===> Deployment complete!"
+        EOF
