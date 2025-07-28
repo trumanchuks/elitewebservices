@@ -10,35 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.7.0
-      with:
-        ssh-private-key: ${{ secrets.EWS_MAIN_KEY }}
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.EWS_MAIN_KEY }}
 
-    - name: Deploy Flask App to Lightsail
-      run: |
-        ssh -o StrictHostKeyChecking=no ec2-user@13.223.114.63 << 'EOF'
-        set -e
+      - name: Deploy Flask App to Lightsail
+        run: |
+          ssh -o StrictHostKeyChecking=no ec2-user@13.223.114.63 << 'EOF'
+          set -e
 
-        echo "=== Pulling latest code ==="
-        cd /var/www/elitewebservices/flask_app || exit 1
-        source venv/bin/activate
-        git config --global --add safe.directory /var/www/elitewebservices
-        git fetch --all
-        git reset --hard origin/flask-deploy
+          echo "=== Pulling latest code ==="
+          cd /var/www/elitewebservices/flask_app || exit 1
+          source venv/bin/activate
+          git config --global --add safe.directory /var/www/elitewebservices
+          git fetch --all
+          git reset --hard origin/flask-deploy
 
-        echo "=== Installing dependencies ==="
-        if [ -f requirements.txt ]; then
-          pip install -r requirements.txt
-        else
-          echo "No requirements.txt found, skipping dependency install"
-        fi
+          echo "=== Installing dependencies ==="
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found, skipping dependency install"
+          fi
 
-        echo "=== Restarting Flask service ==="
-        sudo systemctl restart flaskapp
+          echo "=== Restarting Flask service ==="
+          sudo systemctl restart flaskapp
 
-        echo "=== Deployment complete ✅ ==="
-        EOF
+          echo "=== Deployment complete ✅ ==="
+          EOF
