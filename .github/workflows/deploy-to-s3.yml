@@ -1,3 +1,4 @@
+# Workflow temporarily disabled to avoid failed runs during Flask + Lightsail deployment
 # name: Deploy to S3 + Invalidate CloudFront
 # on:
 #   push:
